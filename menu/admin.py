@@ -14,8 +14,8 @@ class MenuAdmin(admin.ModelAdmin):
 
 @admin.register(MenuItem)
 class MenuItemAdmin(admin.ModelAdmin):
-    fields = ['menu', 'parent', 'title',] # 'url', 'named_url']
-    list_display = ('menu', 'parent', 'title',) # 'url', 'named_url')
+    fields = ['menu', 'parent', 'title', 'urls']
+    list_display = ('menu', 'parent', 'title', 'urls')
     list_per_page = 10
     save_on_top = True
 

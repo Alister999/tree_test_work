@@ -1,26 +1,7 @@
-
-<!--{% for menu in menus %}-->
-<!--    {% if menu.slug == menu_selected %}-->
-<!--        <li style="background-color: #f0f0f0;"><a>{{ menu.name }}</a></li>-->
-<!--        {% if menu_items %}-->
-<!--            <ul>-->
-<!--                {% for item in menu_items %}-->
-<!--                    <li>{{ item.title }}</li>-->
-<!--                {% endfor %}-->
-<!--            </ul>-->
-<!--        {% else %}-->
-<!--            <ul>-->
-<!--                <li>Menu is empty</li>-->
-<!--            </ul>-->
-<!--        {% endif %}-->
-<!--    {% else %}-->
-<!--        <li><a href="{{ menu.get_absolute_url }}">{{ menu.name }}</a></li>-->
-<!--    {% endif %}-->
-<!--{% endfor %}-->
 <h2>{{ menu }}</h2>
 {% if menu_items %}
     {% for item in menu_items %}
-        <li>{{ item.title }}</li>
+        <li><a href={{ item.urls }}>{{ item.title }}</a></li>
     {% endfor %}
 {% else %}
     <li>Menu is empty</li>

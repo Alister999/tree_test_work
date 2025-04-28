@@ -12,10 +12,11 @@
 <p><a href="{% url 'main' %}">Main page</a></p>
 
 
-{% draw_menu 'general-page' %}
-{% draw_menu 'our-services' %}
-{% draw_menu 'about-us' %}
-{% draw_menu 'contacts-us' %}
+{% for menu in menus %}
+    {% draw_menu menu %}
+{% endfor %}
+
+
 
 </body>
 </html>
