@@ -1,3 +1,5 @@
+{% load menu_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,14 @@
 </head>
 <body>
 <h1>Menu of general page</h1>
-<p>Menu</p>
+
+<p><a href="{% url 'main' %}">Main page</a></p>
+
+
+{% draw_menu 'general-page' %}
+{% draw_menu 'our-services' %}
+{% draw_menu 'about-us' %}
+{% draw_menu 'contacts-us' %}
+
 </body>
 </html>
